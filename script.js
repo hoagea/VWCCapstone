@@ -1,9 +1,9 @@
-// script.js
-function toggleMessage() {
-  var messageElement = document.getElementById("message");
-  if (messageElement.innerHTML === "") {
-    messageElement.innerHTML = "Hello, World!";
-  } else {
-    messageElement.innerHTML = "";
-  }
+function openPopup() {
+  document.getElementById('popup').style.display = 'block';
+  document.getElementById('overlay').style.display = 'block';
+}
+
+function closePopup() {
+  document.getElementById('popup').style.display = 'none';
+  document.getElementById('overlay').style.display = 'none';
 }
