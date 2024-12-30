@@ -3,66 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Popup Example</title>
+    <title>Abner Hoage #VetsWhoCode Capstone</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            display: flex;
-        }
-        #sideMenu {
-            width: 200px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 100%;
-            background-color: #333;
-            padding-top: 20px;
-            transition: transform 0.3s ease;
-        }
-        #sideMenu.collapsed {
-            transform: translateX(-200px);
-        }
-        #sideMenu ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        #sideMenu ul li {
-            padding: 8px;
-            text-align: center;
-        }
-        #sideMenu ul li a {
-            color: white;
-            text-decoration: none;
-            display: block;
-        }
-        #sideMenu ul li a:hover {
-            background-color: #575757;
-        }
-        main {
-            margin-left: 220px;
-            padding: 20px;
-            transition: margin-left 0.3s ease;
-        }
-        main.collapsed {
-            margin-left: 20px;
-        }
-        #menuToggle {
-            position: fixed;
-            top: 10px;
-            left: 10px;
-            z-index: 1000;
-        }
-        .content-section {
-            display: none;
-        }
-        .content-section.active {
-            display: block;
-        }
-        .intro-image {
-            float: left;
-            margin-right: 20px;
-        }
-    </style>
 </head>
 <body>
     <button id="menuToggle" onclick="toggleMenu()">Bio Navigation</button>
@@ -85,9 +27,9 @@
         <section id="projects" class="content-section">
             <h1>Projects Portfolio:</h1>
             <p>Showcase your projects, both completed and ongoing. Include images, descriptions, and links to live demos or GitHub repositories.</p>
-            <a href="https://www.example.com">Visit Example</a>
+            
             <ul>
-                <li>Item 1</li>
+                <li><a href="https://www.katmaisolutions.com">Katmai Solutions Website</a></li>
                 <li>Item 2</li>
                 <li>Item 3</li>
             </ul>
@@ -100,6 +42,7 @@
             <div id="popup">
                 <h1>Popup Button</h1>
                 <p>I know how to make a popup button. I used AI to search for how to code this and then modified it to meet my needs.</p>
+                <p><a href="https://www.katmaisolutions.com">Visit Example</a></p>
                 <button onclick="closePopup()">Close</button>
             </div>
             <button onclick="openPopup()">Open Popup</button>
@@ -111,26 +54,6 @@
         </section>
     </main>
 
-    <script>
-        function toggleMenu() {
-            var sideMenu = document.getElementById('sideMenu');
-            var mainContent = document.getElementById('mainContent');
-            sideMenu.classList.toggle('collapsed');
-            mainContent.classList.toggle('collapsed');
-        }
-
-        function showSection(sectionId) {
-            var sections = document.querySelectorAll('.content-section');
-            sections.forEach(function(section) {
-                section.classList.remove('active');
-            });
-            document.getElementById(sectionId).classList.add('active');
-        }
-
-        // Show the Introduction/Bio section by default
-        document.addEventListener('DOMContentLoaded', function() {
-            showSection('intro');
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

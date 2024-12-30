@@ -1,5 +1,6 @@
 /* This rule sets the color of all h1 elements to red. */
 body {
+    display: flex;
     font-family: 'Times New Roman', Times, serif;
     background-color: black;
     color: white;
@@ -13,11 +14,80 @@ body {
         0 0 40px #ff3300,
         0 0 50px #ff0000;
   }
-    
+    a:link {
+      color: #00ccff; /* Unvisited link */
+    }
+
+    a:visited {
+      color: #ff66cc; /* Visited link */
+    }
+
+    a:hover {
+      color: #ffcc00; /* Mouse over link */
+    }
+
+    a:active {
+      color: #ff0000; /* Selected link */
+    }
   p {
       font-size: 18px;
   }
-/* This sets the appearance of the popup and overlay. */
+/* This is the code for the side menu. */
+    #sideMenu {
+      width: 200px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      background-color: #333;
+      padding-top: 20px;
+      transition: transform 0.3s ease;
+  }
+  #sideMenu.collapsed {
+      transform: translateX(-200px);
+  }
+  #sideMenu ul {
+      list-style-type: none;
+      padding: 0;
+  }
+  #sideMenu ul li {
+      padding: 8px;
+      text-align: center;
+  }
+  #sideMenu ul li a {
+      color: white;
+      text-decoration: none;
+      display: block;
+  }
+  #sideMenu ul li a:hover {
+      background-color: #575757;
+  }
+  main {
+      margin-left: 220px;
+      padding: 20px;
+      transition: margin-left 0.3s ease;
+  }
+  main.collapsed {
+      margin-left: 20px;
+  }
+  #menuToggle {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      z-index: 1000;
+  }
+  .content-section {
+      display: none;
+  }
+  .content-section.active {
+      display: block;
+  }
+  .intro-image {
+      float: left;
+      margin-right: 20px;
+  }
+
+  /* This sets the appearance of the popup and overlay. */
   #popup {
     display: none;
     position: fixed;
@@ -26,7 +96,7 @@ body {
     transform: translate(-50%, -50%);
     border: 1px solid #ccc;
     padding: 20px;
-    background-color: white;
+    background-color: black;
     z-index: 1000;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
